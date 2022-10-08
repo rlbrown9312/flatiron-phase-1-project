@@ -1,0 +1,10 @@
+{
+    "characters": [
+      {
+        "id": 1,
+        "name": "Scooby-Doo",
+        "image": "./assets/Scooby-Doo.png",
+        "description": "SCOOBY is a very unique Great Dane. He is able to speak in English, although broken. Scooby's prevalent character traits, despite being loyal and adorable, are cowardice and being perpetually hungry. And because Scooby is typically scared and hungry, he often requires bribary with food, namely with 'Scooby Snacks', as incentive to continue searching for clues to solve the mystery.",
+        "catchphrase": [" 'Ruh-Roh!' & 'Rikes!' "]
+      } ]
+}  
