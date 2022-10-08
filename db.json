@@ -6,5 +6,34 @@
         "image": "./assets/Scooby-Doo.png",
         "description": "SCOOBY is a very unique Great Dane. He is able to speak in English, although broken. Scooby's prevalent character traits, despite being loyal and adorable, are cowardice and being perpetually hungry. And because Scooby is typically scared and hungry, he often requires bribary with food, namely with 'Scooby Snacks', as incentive to continue searching for clues to solve the mystery.",
         "catchphrase": [" 'Ruh-Roh!' & 'Rikes!' "]
-      } ]
+      },
+      {
+        "id": 2,
+        "name": "Shaggy Rogers",
+        "image": "./assets/Shaggy.png",
+        "description": "SHAGGY, like his dog Scooby, is often bribed with Scooby Snacks due to his large appetite and love for food. Shaggy becomes extremely scared when faced with monsters or other frightening situations, usually displaying cowardice to a much greater degree than any other character except for Scooby.",
+        "catchphrase": " 'Zoinks!' "
+      },
+      {
+        "id": 3,
+        "name": "Velma Dinkley",
+        "image": "./assets/Velma.png",
+        "description": "VELMA is a highly intelligent young woman with an interest in the sciences. Due to her intelligence and problem-solving abilities, Velma is typically the first one to solve the mystery and often keeps her conclusions secret till the end of the story.",
+        "catchphrase": [" 'Jinkies!' & 'My glasses! I can't see without my glasses!' "]
+      },
+      {
+        "id": 4,
+        "name": "Daphne Blake",
+        "image": "./assets/Daphne.png",
+        "description": "DAPHNE is a beautiful, fashion forward, and enthusiastic but clumsy and danger-prone member of the gang, who follows her intuition. She commonly serves as the damsel in distress and would occasionally get kidnapped, tied up, and even left imprisoned. But as timewent on, she became a stronger, more independent character who could take care of herself.",
+        "catchphrase": " 'Jeepers!' "
+      },
+      {
+        "id": 5,
+        "name": "Fred Jones",
+        "image": "./assets/Fred.png",
+        "description": "FRED is regarded as the leader of Mystery Incorporated. He is commonly shown giving orders to the rest of the gang and driving the Mystery Machine. He approaches each case with seriousness and care, and works diligently with the rest of the gang to solve the mystery.",
+        "catchphrase": " 'Let's split up gang!' "
+      }
+    ] 
 }  
