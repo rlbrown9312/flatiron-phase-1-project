@@ -67,3 +67,18 @@ const renderProductDetails = (item) => {
     price.textContent = `USD $${item.price}`;
     inventory.textContent = `In stock: ${item.inventory}`;
 }
+
+const bagForm = document.querySelector("#bag_form");
+bagForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+     
+    const userInput = (e.target["bag_amount"].value);
+    currentBag.number_in_bag += parseInt(userInput);
+    const numberInBag = document.querySelector("#number_in_bag")
+    numberInBag.textContent = currentBag.number_in_bag
+
+    bagForm.reset();
+})
+   
+
+   
