@@ -53,3 +53,17 @@ const addProductToPage = (item) => {
     img.addEventListener("click", () => renderProductDetails(item))
     storeItemContainer.append(img);
 }
+
+const renderProductDetails = (item) => {
+    
+    currentBag = item;
+    const product = document.querySelector("#product_name");
+    const image = document.querySelector("#product_image");
+    const price = document.querySelector("#product_price")
+    const inventory = document.querySelector("#product_inventory")
+
+    product.textContent = item.product_name;
+    image.src = item.image;
+    price.textContent = `USD $${item.price}`;
+    inventory.textContent = `In stock: ${item.inventory}`;
+}
