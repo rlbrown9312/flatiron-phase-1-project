@@ -16,6 +16,10 @@ const forEachCharcter = (character) => {
     character.forEach(addCharactersToPage)
 }
 
+const forEachStoreItem = (inventory) => {
+    inventory.forEach(addProductToPage);
+}
+
 const addCharactersToPage = (character) => {
 
     const scoobyGangContainer = document.querySelector("#scooby-gang_container");
@@ -39,4 +43,13 @@ const renderCharacterDetails = (character) => {
     image.src = character.image;
     description.textContent = character.description;
     catchphrase.textContent = `Catchphrase:${character.catchphrase}`;
+}
+
+const addProductToPage = (item) => {
+    
+    const storeItemContainer = document.querySelector("#store_item_container")
+    const img = document.createElement("img");
+    img.src = item.image;
+    img.addEventListener("click", () => renderProductDetails(item))
+    storeItemContainer.append(img);
 }
