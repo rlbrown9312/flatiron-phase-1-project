@@ -2,8 +2,15 @@ fetch("http://localhost:3000/characters")
     .then(res => res.json())
     .then(data => {
         forEachCharcter(data);
-    })
+        renderCharacterDetails(data[0]);
+})
 
+fetch("http://localhost:3000/store")
+    .then(res => res.json())
+    .then(data => {
+        forEachStoreItem(data) 
+        renderProductDetails(data[0]);
+})    
 
 const forEachCharcter = (character) => {
     character.forEach(addCharactersToPage)
