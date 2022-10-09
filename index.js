@@ -20,4 +20,16 @@ const addCharactersToPage = (character) => {
     })
     scoobyGangContainer.append(img);
 }
-    
+
+const renderCharacterDetails = (character) => {
+
+    const name = document.querySelector("#character_name");
+    const image = document.querySelector("#character_image");
+    const description = document.querySelector("#character_description");
+    const catchphrase = document.querySelector("#character_catchphrase");
+
+    name.textContent = `${character.name}! `;
+    image.src = character.image;
+    description.textContent = character.description;
+    catchphrase.textContent = `Catchphrase:${character.catchphrase}`;
+}
