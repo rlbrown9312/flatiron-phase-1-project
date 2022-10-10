@@ -20,3 +20,16 @@ body {
     background-color: indigo;
     color: white;
 }
+
+#scooby-gang_container {
+    display:flex;
+    justify-content: center;
+}
+
+#scooby-gang_container img {
+    width: 200px;
+    height: 200px;
+    margin: 8px;
+    border-radius: 8px;
+    transition: .75s;
+}
