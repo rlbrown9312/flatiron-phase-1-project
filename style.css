@@ -40,3 +40,10 @@ body {
     justify-content: center;
     margin-top: 25px;
 }
+
+#character_name {
+    display: flex;
+    font-size: 50px;
+    color: yellowgreen;
+    margin-right: 20px;
+}
