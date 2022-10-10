@@ -52,3 +52,20 @@ body {
     color: yellowgreen;
     margin-right: 20px;
 }
+
+#character_image {
+    height: auto;
+    margin: 8px;
+    filter: drop-shadow(0 0 0.75rem rgb(165, 7, 217));
+    border-radius: 2px;
+}
+
+.text {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 20px;
+}
+
+#character_catchphrase {
+    color: yellowgreen;
+    font-size: 25px;
+}
