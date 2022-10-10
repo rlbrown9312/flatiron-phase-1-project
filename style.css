@@ -34,6 +34,11 @@ body {
     transition: .75s;
 }
 
+#character_details div {
+    width: 600px;
+    margin-left: 20px;
+}
+
 #character_details {
     display: flex;
     height: 400px;
