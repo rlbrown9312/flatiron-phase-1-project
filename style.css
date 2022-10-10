@@ -91,3 +91,18 @@ body {
     display:flex;
     justify-content: center;
 }
+
+#product_name {
+    display:left;
+    justify-content: center;
+    font-size: 30px;
+    color: yellowgreen;
+    margin-left: 100px;
+    margin-bottom: 10px;
+}
+
+#product_image {
+    width: 170px;
+    height: 205px;
+    margin-left: 100px;
+    margin-top: 5px;
