@@ -33,3 +33,10 @@ body {
     border-radius: 8px;
     transition: .75s;
 }
+
+#character_details {
+    display: flex;
+    height: 400px;
+    justify-content: center;
+    margin-top: 25px;
+}
