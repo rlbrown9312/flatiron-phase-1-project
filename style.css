@@ -35,6 +35,12 @@ body {
     transition: .75s;
 }
 
+#scooby-gang_container img:hover {
+    filter: drop-shadow(0 0 0.75rem white);
+    transform: scale(1.3);
+    z-index: 2;
+}
+
 #character_details div {
     width: 600px;
     margin-left: 20px;
