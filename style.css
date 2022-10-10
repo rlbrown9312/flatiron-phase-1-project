@@ -5,10 +5,11 @@
 
 .scooby-doo_logo {
     margin: 2px 0px 0px 0px;
-    width: 1500px;
+    width: 1900px;
     height: 200px;
     position: static;
 }
+
 .mystery-inc {
     font-size: 80px;
     text-align: center;
@@ -68,4 +69,25 @@ body {
 #character_catchphrase {
     color: yellowgreen;
     font-size: 25px;
+}
+
+#scooby_store {
+    font-size: 60px;
+    text-align: center;
+    color: honeydew;
+    font-family: 'Times New Roman', Times, serif;
+    margin: 20px;
+    text-decoration: underline;
+}
+
+#store_container {
+    display:left;
+    justify-content: center;
+    width: 300px;
+    margin-left: 20px;
+}
+
+#store_item_container {
+    display:flex;
+    justify-content: center;
 }
