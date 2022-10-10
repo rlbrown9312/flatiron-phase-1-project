@@ -131,3 +131,17 @@ form {
     margin-top: 5px;
     margin-left: 100px;
 }
+
+#mystery_machine {
+    width: 400px;
+    height: 100px;
+    margin-bottom: 300px;
+    float: right;
+    margin-right: 750px;
+    
+}
+
+#mystery_machine_img {
+    width: 700px;
+    height: 400px;
+}
