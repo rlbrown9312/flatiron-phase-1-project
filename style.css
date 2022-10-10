@@ -2,3 +2,10 @@
     margin: 0;
     padding: 0;
 }
+
+.mystery-inc {
+    font-size: 80px;
+    text-align: center;
+    text-decoration: underline;
+    color: lavender;
+}
