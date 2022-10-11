@@ -18,7 +18,7 @@ function getStore() {
     .then(res => res.json())
     .then(data => {
         forEachStoreItem(data) 
-        renderProductDetails(data[0]);
+        renderProductDetails(data[5]);
     }) 
 }
         
