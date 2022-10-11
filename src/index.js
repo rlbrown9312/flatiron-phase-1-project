@@ -1,22 +1,26 @@
-let currentBag;
-
-    //Getting a Fetch from the Character Fan Page
 document.addEventListener("DOMContentLoaded", () => {
-fetch("http://localhost:3000/characters")
+    getCharacters()
+    getStore()
+    handleForm()
+})
+
+function getCharacters() {
+    fetch("http://localhost:3000/characters")
     .then(res => res.json())
     .then(data => {
         forEachCharcter(data);
         renderCharacterDetails(data[0]);
     })
- })
+}
 
-//Getting a Fetch from the Store
-fetch("http://localhost:3000/store")
+function getStore() {
+    fetch("http://localhost:3000/store")
     .then(res => res.json())
     .then(data => {
         forEachStoreItem(data) 
         renderProductDetails(data[0]);
-}) 
+    }) 
+}
         
 const forEachCharcter = (character) => {
     character.forEach(addCharactersToPage)
@@ -33,8 +37,6 @@ const addCharactersToPage = (character) => {
     img.src = character.image
     img.addEventListener("click", () => {
         renderCharacterDetails(character) 
-        // console.log(e);
-        // e.target === e.target ? character.image.style.opacity = .1 : character.image.style.opacity = 1;
     
     })
     scoobyGangContainer.append(img);
@@ -62,6 +64,8 @@ const addProductToPage = (item) => {
     storeItemContainer.append(img);
 }
 
+let currentBag;
+
 const renderProductDetails = (item) => {
     
     currentBag = item;
@@ -76,17 +80,18 @@ const renderProductDetails = (item) => {
     inventory.textContent = `In stock: ${item.inventory}`;
 }
 
-const bagForm = document.querySelector("#bag_form");
-bagForm.addEventListener("submit", (e) => {
+function handleForm() {
+    const bagForm = document.querySelector("#bag_form")
+    bagForm.addEventListener("submit", (e) => {
     e.preventDefault();
-     
+    
     const userInput = (e.target["bag_amount"].value);
     currentBag.number_in_bag += parseInt(userInput);
     const numberInBag = document.querySelector("#number_in_bag")
     numberInBag.textContent = currentBag.number_in_bag
 
-    bagForm.reset();
-})
-   
+    e.target.reset();
+    })
+}
 
    

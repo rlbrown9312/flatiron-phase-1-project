@@ -155,6 +155,10 @@ form {
     margin-left: 100px;
 }
 
+#bag_amount {
+    width: 100px;
+}
+
 #mystery_machine {
     width: 400px;
     height: 100px;
