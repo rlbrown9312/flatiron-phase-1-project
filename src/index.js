@@ -4,30 +4,22 @@ document.addEventListener("DOMContentLoaded", () => {
     handleForm()
 })
 
-function getCharacters() {
+const getCharacters = () => {
     fetch("http://localhost:3000/characters")
     .then(res => res.json())
     .then(data => {
-        forEachCharcter(data);
+        data.forEach(character => addCharactersToPage(character));
         renderCharacterDetails(data[0]);
     })
 }
 
-function getStore() {
+const getStore = () => {
     fetch("http://localhost:3000/store")
     .then(res => res.json())
     .then(data => {
-        forEachStoreItem(data) 
+        data.forEach(product => addProductsToPage(product));
         renderProductDetails(data[5]);
-    }) 
-}
-        
-const forEachCharcter = (character) => {
-    character.forEach(addCharactersToPage)
-}
-
-const forEachStoreItem = (inventory) => {
-    inventory.forEach(addProductToPage);
+    })
 }
 
 const addCharactersToPage = (character) => {
@@ -55,7 +47,7 @@ const renderCharacterDetails = (character) => {
     catchphrase.textContent = `Catchphrase:${character.catchphrase}`;
 }
 
-const addProductToPage = (item) => {
+const addProductsToPage = (item) => {
     
     const storeItemContainer = document.querySelector("#store_item_container")
     const img = document.createElement("img");
@@ -80,17 +72,18 @@ const renderProductDetails = (item) => {
     inventory.textContent = `In stock: ${item.inventory}`;
 }
 
-function handleForm() {
+const handleForm = ()=> {
     const bagForm = document.querySelector("#bag_form")
     bagForm.addEventListener("submit", (e) => {
     e.preventDefault();
     
     const userInput = (e.target["bag_amount"].value);
+    console.log(userInput)
     currentBag.number_in_bag += parseInt(userInput);
     const numberInBag = document.querySelector("#number_in_bag")
-    numberInBag.textContent = currentBag.number_in_bag
+    numberInBag.innerText = currentBag.number_in_bag
 
-    e.target.reset();
+    bagForm.reset();
     })
 }
 
