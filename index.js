@@ -1,23 +1,25 @@
-fetch("http://localhost:3000/characters")
-    .then(res => res.json())
-    .then(data => {
-        forEachCharcter(data);
-        renderCharacterDetails(data[0]);
+document.addEventListener("DOMContentLoaded", () => {
+    getCharacters()
+    getStore()
+    handleForm()
 })
 
-fetch("http://localhost:3000/store")
+const getCharacters = () => {
+    fetch("http://localhost:3000/characters")
     .then(res => res.json())
     .then(data => {
-        forEachStoreItem(data) 
-        renderProductDetails(data[0]);
-})    
-
-const forEachCharcter = (character) => {
-    character.forEach(addCharactersToPage)
+        data.forEach(character => addCharactersToPage(character));
+        renderCharacterDetails(data[0]);
+    })
 }
 
-const forEachStoreItem = (inventory) => {
-    inventory.forEach(addProductToPage);
+const getStore = () => {
+    fetch("http://localhost:3000/store")
+    .then(res => res.json())
+    .then(data => {
+        data.forEach(product => addProductsToPage(product));
+        renderProductDetails(data[5]);
+    })
 }
 
 const addCharactersToPage = (character) => {
@@ -27,7 +29,7 @@ const addCharactersToPage = (character) => {
     img.src = character.image
     img.addEventListener("click", () => {
         renderCharacterDetails(character) 
-           
+    
     })
     scoobyGangContainer.append(img);
 }
@@ -45,7 +47,7 @@ const renderCharacterDetails = (character) => {
     catchphrase.textContent = `Catchphrase:${character.catchphrase}`;
 }
 
-const addProductToPage = (item) => {
+const addProductsToPage = (item) => {
     
     const storeItemContainer = document.querySelector("#store_item_container")
     const img = document.createElement("img");
@@ -53,6 +55,8 @@ const addProductToPage = (item) => {
     img.addEventListener("click", () => renderProductDetails(item))
     storeItemContainer.append(img);
 }
+
+let currentBag;
 
 const renderProductDetails = (item) => {
     
@@ -68,17 +72,19 @@ const renderProductDetails = (item) => {
     inventory.textContent = `In stock: ${item.inventory}`;
 }
 
-const bagForm = document.querySelector("#bag_form");
-bagForm.addEventListener("submit", (e) => {
+const handleForm = ()=> {
+    const bagForm = document.querySelector("#bag_form")
+    bagForm.addEventListener("submit", (e) => {
     e.preventDefault();
-     
+    
     const userInput = (e.target["bag_amount"].value);
+    console.log(userInput)
     currentBag.number_in_bag += parseInt(userInput);
     const numberInBag = document.querySelector("#number_in_bag")
-    numberInBag.textContent = currentBag.number_in_bag
+    numberInBag.innerText = currentBag.number_in_bag
 
     bagForm.reset();
-})
-   
+    })
+}
 
    
