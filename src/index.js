@@ -8,7 +8,7 @@ const getCharacters = () => {
     fetch("http://localhost:3000/characters")
     .then(res => res.json())
     .then(data => {
-        data.forEach(character => addCharactersToPage(character));
+        addCharactersToPage(data);
         renderCharacterDetails(data[0]);
     })
 }
@@ -17,21 +17,22 @@ const getStore = () => {
     fetch("http://localhost:3000/store")
     .then(res => res.json())
     .then(data => {
-        data.forEach(product => addProductsToPage(product));
+        addProductsToPage(data);
         renderProductDetails(data[5]);
     })
 }
 
-const addCharactersToPage = (character) => {
+const addCharactersToPage = (characters) => {
+
+    characters.forEach(character => {
 
     const scoobyGangContainer = document.querySelector("#scooby-gang_container");
     const img = document.createElement("img");
     img.src = character.image
-    img.addEventListener("click", () => {
-        renderCharacterDetails(character) 
-    
-    })
+    img.addEventListener("click", () => renderCharacterDetails(character))
     scoobyGangContainer.append(img);
+
+    })
 }
 
 const renderCharacterDetails = (character) => {
@@ -47,13 +48,17 @@ const renderCharacterDetails = (character) => {
     catchphrase.textContent = `Catchphrase:${character.catchphrase}`;
 }
 
-const addProductsToPage = (item) => {
+const addProductsToPage = (items) => {
+
+    items.forEach(item => {
     
     const storeItemContainer = document.querySelector("#store_item_container")
     const img = document.createElement("img");
     img.src = item.image;
     img.addEventListener("click", () => renderProductDetails(item))
     storeItemContainer.append(img);
+    
+    })
 }
 
 let currentBag;
