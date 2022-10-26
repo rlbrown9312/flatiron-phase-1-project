@@ -1,14 +1,14 @@
 document.addEventListener("DOMContentLoaded", () => {
     getCharacters()
     getStore()
-    handleForm()
+    formHandler()
 })
 
 const getCharacters = () => {
     fetch("http://localhost:3000/characters")
     .then(res => res.json())
     .then(data => {
-        data.forEach(character => addCharactersToPage(character));
+        addCharactersToPage(data);
         renderCharacterDetails(data[0]);
     })
 }
@@ -17,21 +17,22 @@ const getStore = () => {
     fetch("http://localhost:3000/store")
     .then(res => res.json())
     .then(data => {
-        data.forEach(product => addProductsToPage(product));
+        addProductsToPage(data);
         renderProductDetails(data[5]);
     })
 }
 
-const addCharactersToPage = (character) => {
+const addCharactersToPage = (characters) => {
 
-    const scoobyGangContainer = document.querySelector("#scooby-gang_container");
-    const img = document.createElement("img");
-    img.src = character.image
-    img.addEventListener("click", () => {
-        renderCharacterDetails(character) 
-    
-    })
-    scoobyGangContainer.append(img);
+    characters.forEach(character => {
+
+        const scoobyGangContainer = document.querySelector("#scooby-gang_container");
+        const img = document.createElement("img");
+        img.src = character.image
+        img.addEventListener("click", () => renderCharacterDetails(character))
+        scoobyGangContainer.append(img);
+
+        })
 }
 
 const renderCharacterDetails = (character) => {
@@ -47,13 +48,17 @@ const renderCharacterDetails = (character) => {
     catchphrase.textContent = `Catchphrase:${character.catchphrase}`;
 }
 
-const addProductsToPage = (item) => {
+const addProductsToPage = (items) => {
+
+    items.forEach(item => {
     
-    const storeItemContainer = document.querySelector("#store_item_container")
-    const img = document.createElement("img");
-    img.src = item.image;
-    img.addEventListener("click", () => renderProductDetails(item))
-    storeItemContainer.append(img);
+        const storeItemContainer = document.querySelector("#store_item_container")
+        const img = document.createElement("img");
+        img.src = item.image;
+        img.addEventListener("click", () => renderProductDetails(item))
+        storeItemContainer.append(img);
+        
+        })
 }
 
 let currentBag;
@@ -72,19 +77,16 @@ const renderProductDetails = (item) => {
     inventory.textContent = `In stock: ${item.inventory}`;
 }
 
-const handleForm = ()=> {
+const formHandler = ()=> {
     const bagForm = document.querySelector("#bag_form")
     bagForm.addEventListener("submit", (e) => {
-    e.preventDefault();
-    
-    const userInput = (e.target["bag_amount"].value);
-    console.log(userInput)
-    currentBag.number_in_bag += parseInt(userInput);
-    const numberInBag = document.querySelector("#number_in_bag")
-    numberInBag.innerText = currentBag.number_in_bag
+        e.preventDefault();
+        
+        const userInput = (e.target["bag_amount"].value);
+        currentBag.number_in_bag += parseInt(userInput);
+        const numberInBag = document.querySelector("#number_in_bag")
+        numberInBag.innerText = currentBag.number_in_bag
 
-    bagForm.reset();
+        bagForm.reset();
     })
 }
-
-   
