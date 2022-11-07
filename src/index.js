@@ -1,26 +1,20 @@
 document.addEventListener("DOMContentLoaded", () => {
-    getCharacters()
-    getStore()
+    getScoobyData()
     formHandler()
 })
-
-const getCharacters = () => {
-    fetch("http://localhost:3000/characters")
+    
+const getScoobyData = () => {
+    fetch("http://localhost:3000/Scooby-Doo")
     .then(res => res.json())
     .then(data => {
-        addCharactersToPage(data);
-        renderCharacterDetails(data[0]);
+         console.log(data)
+         addCharactersToPage(data[0].characters);
+         renderCharacterDetails(data[0].characters[0]);
+         addProductsToPage(data[0].store);
+         renderProductDetails(data[0].store[5]);
     })
 }
 
-const getStore = () => {
-    fetch("http://localhost:3000/store")
-    .then(res => res.json())
-    .then(data => {
-        addProductsToPage(data);
-        renderProductDetails(data[5]);
-    })
-}
 
 const addCharactersToPage = (characters) => {
 
@@ -29,11 +23,17 @@ const addCharactersToPage = (characters) => {
         const scoobyGangContainer = document.querySelector("#scooby-gang_container");
         const img = document.createElement("img");
         img.src = character.image
-        img.addEventListener("click", () => renderCharacterDetails(character))
-        scoobyGangContainer.append(img);
+        img.addEventListener("click", () => renderCharacterDetails(character));
+        scoobyGangContainer.append(img)
+    })
+ }
 
-        })
-}
+ const handleLike = (e) => {
+    const charcterDiv = document.querySelector("#character")
+    const pLike = document.createElement("p")
+    pLike.textContent = "I love you"
+    charcterDiv.append(pLike)
+ }
 
 const renderCharacterDetails = (character) => {
 
@@ -41,12 +41,31 @@ const renderCharacterDetails = (character) => {
     const image = document.querySelector("#character_image");
     const description = document.querySelector("#character_description");
     const catchphrase = document.querySelector("#character_catchphrase");
+    // const button = document.createlElement("button")
+    const characterDiv = document.querySelector("#character");
+    const input = document.createElement("input");
+    characterDiv.append(input);
+    const span =  document.createElement("span");
+    const p = document.createElement("p");
+    span.append(p)
+    input.append(span)
+
+
+
+
 
     name.textContent = `${character.name}! `;
     image.src = character.image;
+    image.addEventListener("click", (e) => { 
+        
+        handleLike(character)
+        console.log(e)
+
+    })
+
     description.textContent = character.description;
     catchphrase.textContent = `Catchphrase:${character.catchphrase}`;
-}
+    p.innerHTML = "Show them love"}
 
 const addProductsToPage = (items) => {
 
@@ -55,9 +74,9 @@ const addProductsToPage = (items) => {
         const storeItemContainer = document.querySelector("#store_item_container")
         const img = document.createElement("img");
         img.src = item.image;
-        img.addEventListener("click", () => renderProductDetails(item))
+        img.addEventListener("click", (e) => renderProductDetails(item))
         storeItemContainer.append(img);
-        
+
         })
 }
 
@@ -91,4 +110,3 @@ const formHandler = ()=> {
     })
 }
 
-   
