@@ -1,122 +1,126 @@
 {
-  "characters": [
-    {
-      "id": 1,
-      "name": "Scooby-Doo",
-      "image": "./assets/Scooby-Doo.png",
-      "description": "SCOOBY-DOO, sometimes just referred to as 'Scooby', is the main protagonist in the series. He is a rather big dog, a Great Dane at that. But he's no usual large pup, he possesses the ability to speak in English. Scooby's prevalent character traits, in addition to being loyal and adorable, are cowardice and being perpetually hungry. And because Scooby is typically hungry and scared, he often requires bribary with food, namely with 'Scooby Snacks', as incentive to continue searching for clues to solve the mystery. He's a good boy!",
-      "catchphrase": [" 'Ruh-Roh!' & 'Rikes!' "]
-    },
-    {
-      "id": 2,
-      "name": "Shaggy Rogers",
-      "image": "./assets/Shaggy.png",
-      "description": "SHAGGY, like his loyal companion Scooby, is often bribed with Scooby Snacks due to his large appetite and love for food. Shaggy becomes extremely scared when faced with monsters or other frightening situations. Usually he displays cowardice to a much greater degree than any other character, except for Scooby. He is also noted to run very fast, even speeding past Scooby on occasion to escape the masked villain. However, despite his cowardice, he remains a loyal member of Mystery Inc.",
-      "catchphrase": " 'Zoinks!' "
-    },
-    {
-      "id": 3,
-      "name": "Velma Dinkley",
-      "image": "./assets/Velma.png",
-      "description": "VELMA is a highly intelligent young woman with an interest in the sciences. Due to her intelligence and problem-solving abilities, Velma is typically the first one to solve the mystery, but she often keeps her conclusions secret, or better yet, unvoiced, till the end. She possibly keeps it concealed as a method to protect and test her assumptions without undesired interference from the unsolved villain. Smart move.",
-      "catchphrase": [" 'Jinkies!' & 'My glasses! I can't see without my glasses!' "]
-    },
-    {
-      "id": 4,
-      "name": "Daphne Blake",
-      "image": "./assets/Daphne.png",
-      "description": "DAPHNE is a beautiful, fashion forward, enthusiastic, but clumsy and danger-prone member of the gang. She follows her intuition, but unfortunately commonly serves as the damsel in distress and occasionally gets kidnapped, tied up, and even left imprisoned. But, as time goes on, she becomes a stronger, more independent character who can take care of herself. She even in later renditions of the Scooby series learns how to fight, earning a black belt in karate. She is also quite good at using her make up accessories to pick open locks on padlocked doors and cages. She proves to be quite resourceful indeed.",
-      "catchphrase": " 'Jeepers!' "
-    },
-    {
-      "id": 5,
-      "name": "Fred Jones",
-      "image": "./assets/Fred.png",
-      "description": "FRED is regarded as the leader of Mystery Incorporated. He is commonly shown giving orders to the rest of the gang and is responsible for driving the Mystery Machine. He approaches each case with seriousness and care, and works diligently with the rest of the gang to solve the mystery. What a reliable guy!",
-      "catchphrase": " 'Let's split up gang!' "
-    }
-  ],
-  
-  "store": [
-      {
-      "id": 1,
-      "product_name": "Scooby Snacks: Vanilla Wafer Cookies",
-      "image": "./assets/scooby_snacks.png",
-      "price": 3.50,
-      "inventory": 20,
-      "number_in_bag": 0
-      },
-      {
-      "id": 2,
-      "product_name": "Scooby pillow",
-      "image": "./assets/Scooby_Doo_pillow.png",
-      "price": 15,
-      "inventory": 9,
-      "number_in_bag": 0
-      },
-      {
-      "id": 3,
-      "product_name": "Mystery Gang Action Figure Set",
-      "image": "./assets/Mystery_Gang_action_figures.png",
-      "price": 25,
-      "inventory": 4,
-      "number_in_bag": 0
-      },
-      {
-      "id": 4,
-      "product_name": "Scooby-Doo on Zombie Island DVD",
-      "image": "./assets/Scooby_movie_Zombie_Island.png",
-      "price": 5.99,
-      "inventory": 4,
-      "number_in_bag": 0
-      },
-      {
-       "id": 5,
-       "product_name": "Scooby-Doo and the Cyber Chase DVD",
-       "image": "./assets/Scooby_movie_Cyber_Chase.png",
-       "price": 4.99,
-       "inventory": 2,
-       "number_in_bag": 0
-      },
-      {
-      "id": 6,
-      "product_name": "Scooby-Doo and the Witch's Ghost DVD",
-      "image": "./assets/Scooby_movie_Witches_Ghost.png",
-      "price": 6.99,
-      "inventory": 3,
-      "number_in_bag": 0
-      },
-      {
-      "id": 7,
-      "product_name": "Mystery Gang T Shirt",
-      "image": "./assets/Mystery_Gang_shirt.png",
-      "price": 20,
-      "inventory": 12,
-      "number_in_bag": 0
-      },
-      {
-      "id": 8,
-      "product_name": "Scooby Stuffed Animal",
-      "image": "./assets/scooby_stuffed_animal.png",
-      "price": 10,
-      "inventory": 5,
-      "number_in_bag": 0
-      },
-      {
-      "id": 9,
-      "product_name": "Scooby Doo Pez's (12ct. Box)",
-      "image": "./assets/scooby_doo_pez's.png",
-      "price": 7.50,
-      "inventory": 10,
-      "number_in_bag": 0
-      },
-      {
-        "id": 10,
-        "product_name": "Scooby Doo Fruit Snacks",
-        "image": "./assets/scooby_doo_fruit_snacks.png",
-        "price": 4.50,
-        "inventory": 17,
-        "number_in_bag": 0
-      }
-  ]
-}
+  "Scooby-Doo": [ { 
+
+      "characters": [
+        {
+          "id": 1,
+          "name": "Scooby-Doo",
+          "image": "./assets/Scooby-Doo.png",
+          "description": "SCOOBY-DOO, sometimes just referred to as 'Scooby', is the main protagonist in the series. He is a rather big dog, a Great Dane at that. But he's no usual large pup, he possesses the ability to speak in English. Scooby's prevalent character traits, in addition to being loyal and adorable, are cowardice and being perpetually hungry. And because Scooby is typically hungry and scared, he often requires bribary with food, namely with 'Scooby Snacks', as incentive to continue searching for clues to solve the mystery. He's a good boy!",
+          "catchphrase": [" 'Ruh-Roh!' & 'Rikes!' "]
+        },
+        {
+          "id": 2,
+          "name": "Shaggy Rogers",
+          "image": "./assets/Shaggy.png",
+          "description": "SHAGGY, like his loyal companion Scooby, is often bribed with Scooby Snacks due to his large appetite and love for food. Shaggy becomes extremely scared when faced with monsters or other frightening situations. Usually he displays cowardice to a much greater degree than any other character, except for Scooby. He is also noted to run very fast, even speeding past Scooby on occasion to escape the masked villain. However, despite his cowardice, he remains a loyal member of Mystery Inc.",
+          "catchphrase": " 'Zoinks!' "
+        },
+        {
+          "id": 3,
+          "name": "Velma Dinkley",
+          "image": "./assets/Velma.png",
+          "description": "VELMA is a highly intelligent young woman with an interest in the sciences. Due to her intelligence and problem-solving abilities, Velma is typically the first one to solve the mystery, but she often keeps her conclusions secret, or better yet, unvoiced, till the end. She possibly keeps it concealed as a method to protect and test her assumptions without undesired interference from the unsolved villain. Smart move.",
+          "catchphrase": [" 'Jinkies!' & 'My glases! I can't see without my glasses!' "]
+        },
+        {
+          "id": 4,
+          "name": "Daphne Blake",
+          "image": "./assets/Daphne.png",
+          "description": "DAPHNE is a beautiful, fashion forward, enthusiastic, but clumsy and danger-prone member of the gang. She follows her intuition, but unfortunately commonly serves as the damsel in distress and occasionally gets kidnapped, tied up, and even left imprisoned. But, as time goes on, she becomes a stronger, more independent character who can take care of herself. She even in later renditions of the Scooby series learns how to fight, earning a black belt in karate. She is also quite good at using her make up accessories to pick open locks on padlocked doors and cages. She proves to be quite resourceful indeed.",
+          "catchphrase": " 'Jeepers!' "
+        },
+        {
+          "id": 5,
+          "name": "Fred Jones",
+          "image": "./assets/Fred.png",
+          "description": "FRED is regarded as the leader of Mystery Incorporated. He is commonly shown giving orders to the rest of the gang and is responsible for driving the Mystery Machine. He approaches each case with seriousness and care, and works diligently with the rest of the gang to solve the mystery. What a reliable guy!",
+          "catchphrase": " 'Let's split up gang!' "
+        }
+      ],
+      
+      "store": [
+          {
+            "id": 1,
+            "product_name": "Scooby Snacks: Vanilla Wafer Cookies",
+            "image": "./assets/scooby_snacks.png",
+            "price": 3.50,
+            "inventory": 20,
+            "number_in_bag": 0
+          },
+          {
+            "id": 2,
+            "product_name": "Scooby pillow",
+            "image": "./assets/Scooby_Doo_pillow.png",
+            "price": 15,
+            "inventory": 9,
+            "number_in_bag": 0
+          },
+          {
+            "id": 3,
+            "product_name": "Mystery Gang Action Figure Set",
+            "image": "./assets/Mystery_Gang_action_figures.png",
+            "price": 25,
+            "inventory": 4,
+            "number_in_bag": 0
+          },
+          {
+            "id": 4,
+            "product_name": "Scooby-Doo on Zombie Island DVD",
+            "image": "./assets/Scooby_movie_Zombie_Island.png",
+            "price": 5.99,
+            "inventory": 4,
+            "number_in_bag": 0
+          },
+          {
+            "id": 5,
+            "product_name": "Scooby-Doo and the Cyber Chase DVD",
+            "image": "./assets/Scooby_movie_Cyber_Chase.png",
+            "price": 4.99,
+            "inventory": 2,
+            "number_in_bag": 0
+          },
+          {
+            "id": 6,
+            "product_name": "Scooby-Doo and the Witch's Ghost DVD",
+            "image": "./assets/Scooby_movie_Witches_Ghost.png",
+            "price": 6.99,
+            "inventory": 3,
+            "number_in_bag": 0
+          },
+          {
+            "id": 7,
+            "product_name": "Mystery Gang T Shirt",
+            "image": "./assets/Mystery_Gang_shirt.png",
+            "price": 20,
+            "inventory": 12,
+            "number_in_bag": 0
+          },
+          {
+            "id": 8,
+            "product_name": "Scooby Stuffed Animal",
+            "image": "./assets/scooby_stuffed_animal.png",
+            "price": 10,
+            "inventory": 5,
+            "number_in_bag": 0
+          },
+          {
+            "id": 9,
+            "product_name": "Scooby Doo Pez's (12ct. Box)",
+            "image": "./assets/scooby_doo_pez's.png",
+            "price": 7.50,
+            "inventory": 10,
+            "number_in_bag": 0
+          },
+          {
+            "id": 10,
+            "product_name": "Scooby Doo Fruit Snacks",
+            "image": "./assets/scooby_doo_fruit_snacks.png",
+            "price": 4.50,
+            "inventory": 17,
+            "number_in_bag": 0
+          }
+      ]
+    } ]
+  }
+    
